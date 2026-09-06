@@ -3,11 +3,26 @@
 <head>
   <meta charset="UTF-8">
   <title>Topazzed - home</title>
+    <!-- importing cool fonts-->
   <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@600;700&display=swap" rel="stylesheet">
   <style>
-
+    /* cool starry night background */
+    body::before{
+        content:"";
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-image: linear-gradient(rgba(15, 10, 25, 0.7), rgba(15, 10, 25, 0.7)), url('Background.jpg');
+        background-size: cover;
+        background-position: center;
+        filter: blur(4px);
+        transform: scale(1.05);
+        z-index: -1;
+    }
     body {
       font-family: sans-serif;
       background-color: #121212;
@@ -19,17 +34,19 @@
 
 
     header h1 {
-      font-size: 75px;
+      font-size: 36px;
       font-family: Fredoka;
-      color: #ecf32f;
-      margin-bottom: 30px;
+      color: #e9d5ff;
+      margin-bottom: 20px;
+      text-shadow: 0 0 20px rgba(192, 132, 252, 0.4);
       font-weight: normal;
-      letter-spacing: 1px;
+      letter-spacing: 4px;
     }
 
 
-    .card {
+    .box {
       background-color: #1e1e1e;
+      background-color: rgba(0, 0, 0, 0.2);
       border: 1px solid #2e2e2e;
       border-radius: 3px;
       width: 260px;
@@ -37,7 +54,7 @@
       padding: 20px;
     }
 
-    .card h2 {
+    .box h2 {
       font-size: 13px;
       color: #888888;
       margin: 0 0 8px 0;
@@ -46,24 +63,40 @@
 
     .balance {
       font-size: 32px;
-      color: #1fe71b;
+      color: #e9d5ff;
       margin: 0;
     }
-
-    .nav-buttons button {
+    /* this took me a lot of studying to make it not look like a 2001 arcade website */
+    .buttons button {
       background-color: #282828;
       color: #ffffff;
-      border: 1px solid #3a3a3a;
-      border-radius: 4px;
+      border: 1px solid rgba(255, 255, 255, 0.2);
+      border-radius: 20px;
+      background-color: rgba(255, 255, 255, 0.1);
       padding: 8px 16px;
       margin: 0 4px;
       font-size: 14px;
       cursor: pointer;
     }
+    .chatbox {
+      background-color: #1e1e1e;
+      background-color: rgba(0, 0, 0, 0.2);
+      border: 1px solid #2e2e2e;
+      border-radius: 3px;
+      width: 260px;
+      height: 130px;
+      margin: 24px auto 24px auto;
+      padding: 20px;
+      text-align: left;
+    }
   
 
-    .nav-buttons button:hover {
+    .buttons button:hover {
       background-color: #383838;
+    background-color: rgba(255, 255, 255, 0.25);
+    transform: scale(1.05);
+    transition: transform 0.2s, box-shadow 0.2s
+
     }
   </style>
 </head>
@@ -74,22 +107,24 @@
   </header>
 
   <main>
-    <div class="card">
+    <div class="box">
       <h2>Account Balance</h2>
+        <!-- this is how much money you have -->
       <p class="balance">$100</p>
     </div>
-
-    <div class="nav-buttons">
-      <button onclick="goToWorkMenu()">Work</button>
+    
+    <div class="buttons">
+        <!-- where the buttons go (add more as needed)-->
+      <button>Work</button>
       <button>Shop</button>
       <button>Gamble</button>
       <button>Leaderboard</button>
     </div>
+    <div class="chatbox">
+        <p>this is chat/broadcast box</p>
+    </div>
   </main>
-  <script>
-    function goToWorkMenu(){
-        window.location.href = "workmenu.html";
-    }
-  </script>
+
 </body>
 </html>
+<!--yayyy ur at the end-->
