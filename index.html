@@ -49,9 +49,10 @@
       background-color: rgba(0, 0, 0, 0.2);
       border: 1px solid #2e2e2e;
       border-radius: 3px;
-      width: 260px;
+      width: 520px;
       margin: 0 auto 24px auto;
       padding: 20px;
+      
     }
 
     .box h2 {
@@ -65,7 +66,10 @@
       font-size: 32px;
       color: #e9d5ff;
       margin: 0;
+      font-family: 'JetBrains Mono', monospace;
     }
+    .box svg{ width: 22px; height: 22px; align-self: center; }
+    
     /* this took me a lot of studying to make it not look like a 2001 arcade website */
     .buttons button {
       background-color: #282828;
@@ -98,6 +102,10 @@
     transition: transform 0.2s, box-shadow 0.2s
 
     }
+
+    .balance-unit {
+      opacity: 70%;
+    }
   </style>
 </head>
 <body>
@@ -110,8 +118,12 @@
     <div class="box">
       <h2>Account Balance</h2>
         <!-- this is how much money you have -->
-      <p class="balance">$100</p>
-    </div>
+<svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <path d="M12 2L2 9L5 22H19L22 9L12 2Z" fill="#e8c257" opacity="0.85"/>
+</svg>
+    <span class="balance">100</span>
+    <span class="balance-unit">topaz</span>
+  </div>
     
     <div class="buttons">
         <!-- where the buttons go (add more as needed)-->
